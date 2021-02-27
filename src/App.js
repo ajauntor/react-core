@@ -15,7 +15,7 @@ function App() {
 function Mango(){
   const mangoStyle ={
     border:"1px solid green",
-    margin: "5px",
+    margin: "10px",
   }
   return (
   <div style={mangoStyle}>
