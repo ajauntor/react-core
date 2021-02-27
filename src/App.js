@@ -2,22 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  var aboutMe = {
-    myName: "MD Aktarujjaman",
-    myJob: "I learn Web Development"
-  }
-  var someStyle ={
-    color : "red",
-    backgroundColor : "green",
-    padding : "10px"
-  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Result = {aboutMe.myName+" "+ aboutMe.myJob}</h2>
-        <p style={someStyle}>This is AJ Auntor</p>
+      <Mango></Mango>
+      <Mango></Mango>
       </header>
     </div>
+  );
+}
+function Mango(){
+  const mangoStyle ={
+    border:"1px solid green",
+    margin: "5px",
+  }
+  return (
+  <div style={mangoStyle}>
+    <h2 style={{padding:"0 5px"}}>Mango is very famous food in bangladesh</h2>
+    <h4>So, let's eat mango!</h4>
+  </div>
   );
 }
 
