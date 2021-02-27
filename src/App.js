@@ -2,35 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const productList=[
-    {names:"Hero Hunk", ccLimit:"160kmp", price:"$3216"},
-    {names:"Pulsar NS", ccLimit:"175kmp", price:"$3010"}
-]
+  const friendsName = [
+    {name:"Abdul Jalil", age:45, location: "Kismot"},
+    {name:"AJ Auntor", age:24, location:"Hossenpur"},
+    {name:"Israt Jahan", age:23, location:"Mirpur, Dhaka"}
+  ]
+  const friends = friendsName.map(friend => friend);
+  console.log(Friends);
   return (
     <div className="App">
       <header className="App-header">
-        <Product></Product>
-      <Product heroHunk={productList[0]}></Product>
+      <Friends name={friendsName[0].name} location={friendsName[0].location} age={friendsName[0].age}></Friends>
       </header>
     </div>
   );
 }
-function Product(props){
-  const productStyle={
-    backgroundColor: "#524444",
-    border:"10px solid #3D2F2F",
-    borderRadius: "5px",
-    width:"400px",
-    height:"370px",
-    float:"left",
-  }
-  console.log(props);
+function Friends(props){
   return(
-    <div style={productStyle}>
-      <h3>Bike Model:{props.heroHunk.names}</h3>
-      <h2>Max Speed:{props.speed}</h2>
-      <button>Buy Now</button>
+    <div>
+      <h3>Your Name is: {props.name}</h3>
+      <h4>Your Current location is:{props.location}</h4>
+      <h4>Your Age is: {props.age}</h4>
     </div>
-  )
+  );
 }
 export default App;
